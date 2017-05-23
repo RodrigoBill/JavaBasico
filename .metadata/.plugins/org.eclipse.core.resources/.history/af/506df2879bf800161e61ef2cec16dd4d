@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class ControlesDecisoesLoopsExerciciosIfSwitch {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int num1;
+		int num2;
+
+		// //Exercício 1 Imprimir o maior
+		// System.out.println("Digite dois números: ");
+		// num1 = scan.nextInt();
+		// num2 = scan.nextInt();
+		//
+		// if(num1 > num2){
+		// System.out.println(num1 + " é maior.");
+		// }else if (num1 == num2){
+		// System.out.println(num1 + " é igual a " + num2);
+		// }else{
+		// System.out.println(num2 + " é maior.");
+		// }
+		//
+		// //Exercício 2 Mostrar se é positivo ou negativo
+		// System.out.println("Digite um número: ");
+		// num1 = scan.nextInt();
+		// if(num1 < 0){
+		// System.out.println(num1 + " é negativo.");
+		// }else{
+		// System.out.println(num1 + " é positivo.");
+		// }
+
+		// //Exercício 3 Saber se é masculino ou feminino
+		// System.out.println("Digite f para sexo feminino e m para masculino:
+		// ");
+		// String sexo = scan.next();
+		//
+		// if(sexo.equalsIgnoreCase("f")){
+		// System.out.println("Feminino");
+		// }else if(sexo.equalsIgnoreCase("m")){
+		// System.out.println("Masculino");
+		// }
+
+		// Exercício 4 Saber se é vogal ou consoante
+		System.out.println("Digite uma letra: ");
+		String letra = scan.next();
+
+		if (letra.length() > 1) {
+			System.out.println("Não é uma letra válida");
+		} else {
+			switch (letra) {
+			case "a":
+			case "e":
+			case "i":
+			case "o":
+			case "u":
+			case "A":
+			case "E":
+			case "I":
+			case "O":
+			case "U":
+				System.out.println("É vogal.");
+				break;
+			default:
+				System.out.println("É consoante.");
+			}
+		}
+	}
+}

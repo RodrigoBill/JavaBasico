@@ -1,0 +1,48 @@
+package ControlesDecisoesLoopsExercícios;
+
+import java.util.Scanner;
+
+public class ExreciciosWhileFor {
+
+	public static void main(String[] args) {
+
+		int num1 = 0;
+		int num2 = 0;
+		int num3 = 0;
+		Scanner scan = new Scanner(System.in);
+
+		// Exrcício 1 - Pedir até que o valor numérico seja entre 0 e 10.
+		/*
+		 * System.out.print("Dê uma nota entre 0 e 10: "); num1 =
+		 * scan.nextInt(); while (num1 < 0 || num1 > 10) { System.out.print(
+		 * "Dê uma nota entre 0 e 10 válida: "); num1 = scan.nextInt(); }
+		 * 
+		 * System.out.println("O número " + num1 + " é válido");
+		 */
+
+		// Exercício 2 - Ler usuário e senha. Senha não pode ser igual ao
+		// usuário
+
+		String usuario;
+		String senha;
+		boolean diferente = false;
+
+		do {
+			System.out.print("Digite seu usuário: ");
+			usuario = scan.next();
+			System.out.print("Digite a senha: ");
+			senha = scan.next();
+			
+			if (senha.equalsIgnoreCase(usuario)) {
+				diferente = false;
+			}else{
+				System.out.println("Usuário e senha não podem ser iguais.");
+				System.out.println("Digite novamente.");
+			}
+
+		} while (!diferente);
+
+		System.out.println("Usuário e senha válidos!");
+	}
+
+}

@@ -1,0 +1,218 @@
+import java.util.Scanner;
+
+public class ControlesDecisoesLoopsExerciciosIfSwitch {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int num1;
+		int num2;
+		int num3;
+		int num4;
+
+		double nota1;
+		double nota2;
+		double nota3;
+		double nota4;
+		
+		String letra;
+		
+		// //Exercício 1 Imprimir o maior
+		// System.out.println("Digite dois números: ");
+		// num1 = scan.nextInt();
+		// num2 = scan.nextInt();
+		//
+		// if(num1 > num2){
+		// System.out.println(num1 + " é maior.");
+		// }else if (num1 == num2){
+		// System.out.println(num1 + " é igual a " + num2);
+		// }else{
+		// System.out.println(num2 + " é maior.");
+		// }
+		//
+		// //Exercício 2 Mostrar se é positivo ou negativo
+		// System.out.println("Digite um número: ");
+		// num1 = scan.nextInt();
+		// if(num1 < 0){
+		// System.out.println(num1 + " é negativo.");
+		// }else{
+		// System.out.println(num1 + " é positivo.");
+		// }
+
+		// //Exercício 3 Saber se é masculino ou feminino
+		// System.out.println("Digite f para sexo feminino e m para masculino:
+		// ");
+		// String sexo = scan.next();
+		//
+		// if(sexo.equalsIgnoreCase("f")){
+		// System.out.println("Feminino");
+		// }else if(sexo.equalsIgnoreCase("m")){
+		// System.out.println("Masculino");
+		// }
+
+		// Exercício 4 Saber se é vogal ou consoante
+//		System.out.println("Digite uma letra: ");
+//		letra = scan.next();
+//
+//		if (letra.length() > 1) {
+//			System.out.println("Não é uma letra válida");
+//		} else {
+//			switch (letra) {
+//			case "a":
+//			case "e":
+//			case "i":
+//			case "o":
+//			case "u":
+//			case "A":
+//			case "E":
+//			case "I":
+//			case "O":
+//			case "U":
+//				System.out.println("É vogal.");
+//				break;
+//			default:
+//				System.out.println("É consoante.");
+//			}
+//		}
+		
+		//Exercício 5 Calcular duas notas / media /aprovação
+//		System.out.println("Digite a primeira nota: ");
+//		nota1 = scan.nextDouble();
+//		System.out.println("Digite a segunda nota: ");
+//		nota2 = scan.nextDouble();
+//		
+//		double media = (nota1+nota2)/2;
+//		
+//		if(media == 10){
+//			System.out.println("Sua média é " + media + ", você está foi aprovado com louvor!");
+//		}else if(media < 7){
+//			System.out.println("Sua média é " + media + ", você está reprovado!");
+//		}else if(media >= 7){
+//			System.out.println("Sua média é " + media + ", você está aprovado!");
+//		}
+		
+		//Exercício 6 Mostrar maior de 3 números
+//		System.out.println("Digite 3 números: ");
+//		num1 = scan.nextInt();
+//		num2 = scan.nextInt();
+//		num3 = scan.nextInt();
+//		
+//		if(num1 >= num2 && num1 >= num3){
+//			System.out.println(num1 + " é maior.");
+//		}else if(num2 >= num1 && num2 >= num3){
+//			System.out.println(num2 + " é maior.");
+//		}else{
+//			System.out.println(num3 + " é maior.");
+//		}
+		
+		//Exercício 7 Mostrar maior e menor de 3 números
+//				System.out.println("Digite 3 números: ");
+//				num1 = scan.nextInt();
+//				num2 = scan.nextInt();
+//				num3 = scan.nextInt();
+//				
+//				if(num1 >= num2 && num1 >= num3){
+//					System.out.println(num1 + " é maior.");
+//				}else if(num2 >= num1 && num2 >= num3){
+//					System.out.println(num2 + " é maior.");
+//				}else if(num3 >= num1 && num3 >= num2){
+//					System.out.println(num3 + " é maior.");
+//				}
+//				
+//				if(num1 <= num2 && num1 <= num3){
+//					System.out.println(num1 + " é menor.");
+//				}else if(num2 <= num1 && num2 <= num3){
+//					System.out.println(num2 + " é menor.");
+//				}else if(num3 <= num1 && num3 <= num2){
+//					System.out.println(num3 + " é menor.");
+//				}
+		
+		//Exercício 8 Mostrar maior e menor de 3 preços
+//		System.out.println("Digite 3 preços de produto: ");
+//		nota1 = scan.nextDouble();
+//		nota2 = scan.nextDouble();
+//		nota3 = scan.nextDouble();
+//		if(nota1 <= nota2 && nota1 <= nota3){
+//			System.out.println(nota1 + " é menor.");
+//		}else if(nota2 <= nota1 && nota2 <= nota3){
+//			System.out.println(nota2 + " é menor.");
+//		}else if(nota3 <= nota1 && nota3 <= nota2){
+//			System.out.println(nota3 + " é menor.");
+//		}
+		
+		//Exercício 9 3 numeros em ordem decrescente
+//		System.out.println("Digite 3 números: ");
+//		num1 = scan.nextInt();
+//		num2 = scan.nextInt();
+//		num3 = scan.nextInt();
+//		
+//		if(num1 <= num2 && num1 <= num3 && num2 <= num3){
+//			//num3 é maior
+//			//num1 é menor
+//			//num1 < num2 < num3
+//			System.out.println(num3 + " - " + num2 + " - " + num1);
+//		}else if(num1 <= num2 && num1 <= num3 && num3 <= num2){
+//			//num2 é maior
+//			//num1 é menor
+//			//num1 < num3 < num2
+//			System.out.println(num2 + " - " + num3 + " - " + num1);
+//		}else if(num2 <= num1 && num2 <= num3 && num1 <= num3){
+//			//num3 é maior
+//			//num2 é menor
+//			//num2 < num1 < num3
+//			System.out.println(num3 + " - " + num1 + " - " + num2);
+//		}else if(num2 <= num1 && num2 <= num3 && num3 <= num1){
+//			//num1 é maior
+//			//num2 é menor
+//			//num2 < num3 < num1
+//			System.out.println(num1 + " - " + num3 + " - " + num2);
+//		}else if(num3 <= num1 && num3 <= num2 && num1 <= num2){
+//			//num2 é maior
+//			//num3 é menor
+//			//num3 < num1 < num2
+//			System.out.println(num2 + " - " + num1 + " - " + num3);
+//		}else if(num3 <= num1 && num3 <= num2 && num2 <= num1){
+//			//num1 é maior
+//			//num3 é menor
+//			//num3 < num1 < num2
+//			System.out.println(num1 + " - " + num2 + " - " + num3);
+//		}
+		
+		//Exercício 10 ler e imprimir de acordo com a letra
+//		System.out.println("Qual turno estuda (M)Matutino, (V)Vespertino ou (N)Noturno: ");
+//		letra = scan.next();
+//		
+//		if(letra.length() > 1){
+//			System.out.println("Digitou mais de uma letra.");
+//		}else{
+//			switch (letra) {
+//			case "m": System.out.println("Bom dia!");break;
+//			case "M": System.out.println("Bom dia!");break;
+//			case "v": System.out.println("Boa tarde!");break;
+//			case "V": System.out.println("Boa tarde!");break;
+//			case "n": System.out.println("Boa noite!");break;
+//			case "N": System.out.println("Boa noite!");break;
+//
+//			default: System.out.println("Valor inválido!");
+//				
+//			}
+//		}
+		
+		//Exercício 11
+		System.out.println("Digite o salário: ");
+		double salario = scan.nextDouble();
+		double reajuste = salario/100;
+		double ajustado;
+		
+		if(salario <= 280){
+			ajustado = salario + (reajuste*20);
+			System.out.println("Salário ajustado é de " + ajustado);
+		}else if(salario >= 280 && salario <= 700){
+			ajustado = salario + (reajuste*15);
+			System.out.println("Salário ajustado é de " + ajustado);
+		}else if(salario >= 700 && salario <= 1500){
+			ajustado = salario + (reajuste*10);
+			System.out.println("Salário ajustado é de " + ajustado);
+		}
+	}
+}

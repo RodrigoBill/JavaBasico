@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ControlesDecisoesLoops {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner (System.in);
+		
+		double preco = scan.nextDouble();
+		if (preco <= 10){
+			System.out.println("Preço bom!");
+		}else if (preco > 10 && preco < 15){
+			System.out.println("Mais ou menos, chore desconto!");
+		}else if (preco > 15 && preco < 17){
+			System.out.println("Mais ou menos, pesquise mais!");
+		}else{
+			System.out.println("Muito caro!");
+		}
+
+	}
+
+}

@@ -1,0 +1,534 @@
+package ControlesDecisoesLoopsExercícios;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class ExreciciosWhileFor {
+
+	public static void main(String[] args) {
+
+		int num1 = 0;
+		int num2 = 0;
+		int num3 = 0;
+		int num4 = 0;
+		int num5 = 0;
+		Scanner scan = new Scanner(System.in);
+
+		// Exrcício 1 - Pedir até que o valor numérico seja entre 0 e 10.
+		/*
+		 * System.out.print("Dê uma nota entre 0 e 10: "); num1 =
+		 * scan.nextInt(); while (num1 < 0 || num1 > 10) { System.out.print(
+		 * "Dê uma nota entre 0 e 10 válida: "); num1 = scan.nextInt(); }
+		 * 
+		 * System.out.println("O número " + num1 + " é válido");
+		 */
+
+		// Exercício 2 - Ler usuário e senha. Senha não pode ser igual ao
+		// usuário
+
+		String usuario;
+		String senha;
+		boolean diferente = false;
+
+		/*
+		 * do { System.out.print("Digite seu usuário: "); usuario = scan.next();
+		 * System.out.print("Digite a senha: "); senha = scan.next();
+		 * 
+		 * if (senha.equalsIgnoreCase(usuario)) { System.out.println(
+		 * "Usuário e senha iguais, digite novamente."); }else{ diferente =
+		 * true; }
+		 * 
+		 * } while (!diferente);
+		 * 
+		 * System.out.println("Usuário e senha válidos!");
+		 */
+
+		// Exercício 3 - Ler e validar NOME, IDADE, SALÁRIO, SEXO e ESTADO CIVÍL
+
+		/*
+		 * String nome; int idade = 0; double salario = 0; String sexo; String
+		 * estadoCivil; boolean valido = false;
+		 * 
+		 * do{ System.out.println("Seu nome: "); nome = scan.next();
+		 * if(nome.length() > 3){ valido = true; }else{ System.out.println(
+		 * "Nome deve ter mais de 3 letras. Digite novamente."); }
+		 * }while(!valido);
+		 * 
+		 * do{ System.out.print("Sua idade: "); idade = scan.nextInt(); if(idade
+		 * > 0 && idade < 150){ valido = true; }else{ valido = false;
+		 * System.out.print("Idade deve ter entre 0 e 150. Digite novamente ");
+		 * } }while(!valido);
+		 * 
+		 * do{ System.out.print("Seu salário: "); salario = scan.nextDouble();
+		 * if(salario > 0){ valido = true; }else{ valido = false;
+		 * System.out.print("Salário deve ser maior que 0. Digite novamente ");
+		 * } }while(!valido);
+		 * 
+		 * do{ System.out.print("Seu sexo (M-F): "); sexo = scan.next();
+		 * if(sexo.length() == 1){ switch(sexo){ case "M": case "m": case "f":
+		 * case "F": valido = true;break;
+		 * 
+		 * default: valido = false; System.out.print(
+		 * "Sexo deve ser Feminino (F/f) ou Masculino (M/m). Digite novamente "
+		 * ); }
+		 * 
+		 * }else{ valido = false; System.out.print(
+		 * "Sexo deve ser Feminino (F/f) ou Masculino (M/m). Digite novamente "
+		 * ); } }while(!valido);
+		 * 
+		 * do{ System.out.print("Seu estado civíl (S-C-V-D): "); estadoCivil =
+		 * scan.next(); if(estadoCivil.length() == 1){ switch(estadoCivil){ case
+		 * "S": case "s": case "C": case "c": case "V": case "v": case "D": case
+		 * "d": valido = true;break;
+		 * 
+		 * default: valido = false; System.out.print(
+		 * "Seu estado civíl deve ser S, C, V ou D. Digite novamente "); }
+		 * 
+		 * }else{ valido = false; System.out.print(
+		 * "Seu estado civíl deve ser S, C, V ou D. Digite novamente "); }
+		 * }while(!valido);
+		 * 
+		 * System.out.println(nome); System.out.println(idade);
+		 * System.out.println(salario); System.out.println(sexo);
+		 * System.out.println(estadoCivil);
+		 */
+		// Exercício 4 - País A 80000 habitantes crescimento 3%, B 200000
+		// habitantes crescimento 1,5%
+		// Quantos anos será necessário para País A igualar ou passar País B.
+		/*
+		 * double paisA = 80000; double paisB = 200000; double parcialA = 0;
+		 * double parcialB = 0; int anos = 0;
+		 * 
+		 * double porcentagemA = 3; double porcentagemB = 1.5;
+		 * 
+		 * boolean quantidadeDeHabitantes = false;
+		 * 
+		 * DecimalFormat PA = new DecimalFormat("0.00"); String totalPaisA =
+		 * PA.format(paisA);
+		 * 
+		 * DecimalFormat PB = new DecimalFormat("0.00"); String totalPaisB =
+		 * PB.format(paisB); do{
+		 * 
+		 * totalPaisA = PA.format(paisA); totalPaisB = PB.format(paisB);
+		 * 
+		 * System.out.println(totalPaisA + " <=> " + totalPaisB); parcialA =
+		 * (paisA/100)*porcentagemA; paisA = parcialA + paisA;
+		 * 
+		 * parcialB = (paisB/100)*porcentagemB; paisB = parcialB + paisB;
+		 * 
+		 * if(paisA < paisB){ anos ++; }else{ quantidadeDeHabitantes = true; }
+		 * 
+		 * }while(!quantidadeDeHabitantes);
+		 * 
+		 * totalPaisA = PA.format(paisA); totalPaisB = PB.format(paisB);
+		 * 
+		 * System.out.println(totalPaisA + " <=> " + totalPaisB);
+		 * System.out.println("Em " + anos +
+		 * " ano(s) a população de A estará igual ou maior ao de B.");
+		 */
+		// Exercício 5 - Alterar o exercício anterior permitindo inserir os
+		// países, quantidade de habitantes e porcentagem de crescimento
+/*
+		String nmeA;
+		String nmeB;
+		double paisA = 80000;
+		double paisB = 200000;
+		double parcialA = 0;
+		double parcialB = 0;
+		int anos = 0;
+
+		double porcentagemA = 0;
+		double porcentagemB = 0;
+
+		boolean quantidadeDeHabitantes = false;
+		boolean novaConsulta = false;
+
+		do {
+
+			DecimalFormat PA = new DecimalFormat("0.00");
+			String totalPaisA = PA.format(paisA);
+
+			DecimalFormat PB = new DecimalFormat("0.00");
+			String totalPaisB = PB.format(paisB);
+
+			nmeA = JOptionPane.showInputDialog("Digite o primeiro país: ");
+			//nmeA = scan.next();
+			nmeB = JOptionPane.showInputDialog("Digite o segundo país: ");
+			//nmeB = scan.next();
+
+			System.out.print("Qual a população de " + nmeA + ":");
+			paisA = scan.nextDouble();
+			System.out.print("Qual a população de " + nmeB + ":");
+			paisB = scan.nextDouble();
+			
+			System.out.print("Qual a porcentagem de crescimento ao ano do país " + nmeA + ":");
+			porcentagemA = scan.nextDouble();
+			System.out.print("Qual a porcentagem de crescimento ao ano do país " + nmeB + ":");
+			porcentagemB = scan.nextDouble();
+			
+			if (paisA < paisB) {
+
+				do {
+
+					parcialA = (paisA / 100) * porcentagemA;
+					paisA = parcialA + paisA;
+
+					parcialB = (paisB / 100) * porcentagemB;
+					paisB = parcialB + paisB;
+
+					if (paisA < paisB) {
+						anos++;
+					} else {
+						quantidadeDeHabitantes = true;
+					}
+
+				} while (!quantidadeDeHabitantes);
+
+				totalPaisA = PA.format(paisA);
+				totalPaisB = PB.format(paisB);
+
+				System.out.println(totalPaisA + " <=> " + totalPaisB);
+				System.out.println(
+						"O país " + nmeA + " levará " + anos + " anos para se igualar ou passar em número o país " + nmeB);
+
+			} else if (paisA > paisB) {
+
+				do {
+
+					parcialA = (paisA / 100) * porcentagemA;
+					paisA = parcialA + paisA;
+
+					parcialB = (paisB / 100) * porcentagemB;
+					paisB = parcialB + paisB;
+
+					if (paisA > paisB) {
+						anos++;
+					} else {
+						quantidadeDeHabitantes = true;
+					}
+
+				} while (!quantidadeDeHabitantes);
+
+				totalPaisA = PA.format(paisA);
+				totalPaisB = PB.format(paisB);
+
+				System.out.println(totalPaisA + " <=> " + totalPaisB);
+				System.out.println(
+						"O país " + nmeB + " levará " + anos + " para se igualar ou passar em número o país " + nmeA);
+			}
+
+			boolean deNovo = false;
+			do {
+
+				System.out.println("Deseja fazer nova consulta? S/N");
+				String simNao;
+				simNao = scan.next();
+
+				if (simNao.length() == 1) {
+
+					switch (simNao) {
+					case "S":
+					case "s":
+						novaConsulta = true;
+						deNovo = true;
+						break;
+					case "N":
+					case "n":
+						novaConsulta = false;
+						deNovo = true;
+						break;
+
+					default:
+					}
+
+				}
+			} while (!deNovo);
+
+		} while (novaConsulta);
+*/
+		//Exercício 6 - Mostra os número de 1 a 20 um abaixo do outro
+		//Depois mostrar um do lado do outro
+/*		
+		for(int i = 1; i<=20; i++){
+			System.out.println(i);
+		}
+		for(int i = 1; i<=20; i++){
+			System.out.print(i+" ");
+		}
+
+		//Exercício 7 - Ler 5 números e informar o maior
+		num2 = Integer.MIN_VALUE;
+		for(int i = 1; i<=5; i++){
+			System.out.println("Digite um números: ");
+			num1 = scan.nextInt();
+			
+			if(num1>num2){
+				num2 = num1;
+			}
+		}
+		System.out.println("Maior número é "+num2);
+		
+		//Exercício 8 - Ler 5 números e informar soma e média
+				int soma=0;
+				int media=0;
+				int i;
+				for(i = 0; i<5; i++){
+					System.out.println("Digite um números: ");
+					num1 = scan.nextInt();
+						soma += num1;
+				}
+				media = soma/i;
+				System.out.println("Dividir por = "+i);
+				System.out.println("Soma = "+soma);
+				System.out.println("Média = "+media);
+		
+				//Exrcício 9 - Imprimir números pares de 1 a 50
+				for(int i = 1; i <= 50; i++){
+					if(i%2 != 0){
+				     System.out.println(i);
+				    }
+				}
+
+		//Exrcício 10 - Receber dois números inteiros e imprimir os primos entre eles
+		System.out.println("Digite dois números em ordem crescente: ");
+		num1 = scan.nextInt();
+		num2 = scan.nextInt();
+
+		if(num1>num2){
+			num3=num2;
+		    num2=num1;
+		    num1=num3;
+		}
+
+		for(int i = num1; i<=num2; ++i){
+			System.out.println(i);
+		}    
+
+		//Exrcício 11 - Mostrar a soma do exercício anterior
+		System.out.println("Digite dois números em ordem crescente: ");
+		num1 = scan.nextInt();
+		num2 = scan.nextInt();
+
+		if(num1>num2){
+			num3=num2;
+		    num2=num1;
+		    num1=num3;
+		}
+
+		int soma=0;
+		for(int i = num1; i<=num2; ++i){
+			System.out.println(i);
+		    soma = soma + i;
+		}    
+		System.out.println("Soma "+ soma);
+
+		//Exercício 12 - Gerador de tabuada de 1 a 10
+		System.out.println("Digite um número para saber a tabuada de 1 a 10: ");
+		num1 = scan.nextInt();
+		int soma = 0;
+		for(int i = 1; i < 11; i++){
+			soma = num1 * i;
+		    System.out.println(num1 + " x " + i + " = " + soma);
+		}
+
+		//Exercício 13 - Ler dois números e eleve o primeiro número pelo segundo(Base - Expoente)
+		System.out.println("Digite dois números: ");
+		num1 = scan.nextInt();
+		num2 = scan.nextInt();
+		int total = num1;
+		for(int i = 0; i < num2; i++){
+			total = total * num1;
+		}
+		System.out.println("Total =  "+total);
+		
+		//Exercício 14 - Pedir 10 números e calcular a quantidade de pares e impares
+		int pares=0;
+		int impares=0;
+		for(int i = 1; i < 11; i++){
+			System.out.println("Digite o "+ i + "º números de dez: ");
+			num1 = scan.nextInt();
+		if(num1%2 == 0){
+			pares++;
+		}else{
+				impares++;
+			}
+		}
+		System.out.println("Quantidade de números pares "+ pares);
+		System.out.println("Quantidade de números impares "+ impares);
+
+		//Exercício 15 - Qual termo n-ésimo deseja saber de fibonacci
+		System.out.println("Qual termo de fibonacci deseja saber: ");
+		num1 = scan.nextInt();
+		int a=1;
+		int b=0;
+		int c=0;
+		int i;
+		for(i = 0; i < num1; i++ ){
+			c=a+b;
+			b=a;
+			a=c;
+		}
+		System.out.println("O termo fibonacci " + num1 + " é " + c);
+
+		//Exercício 16 - Fazer a série de Fibonacci até que o valor seja maior que 500
+		System.out.println("Sequência fibonacci até maior que 500: ");
+		num1 = scan.nextInt();
+		int a=1;
+		int b=0;
+		int c=0;
+		
+		do{
+			c=a+b;
+			System.out.println(a +" + "+ b + " = " + c);
+			b=a;
+			a=c;
+		}while(c<=500);
+
+		//Exercício 17 - Calcular Fatorial
+		System.out.println("Digite um número para saber o fatorial: ");
+		num1 = scan.nextInt();
+		int total=num1;
+		System.out.print(num1 +"! = ");
+		System.out.print(num1 + " x ");
+		for(int i = 1; i < num1 ; i++){
+			
+			total = total * (num1-i);
+			if (num1-i != 1) {
+				System.out.print((num1-i) +" x ");
+			} else {
+				System.out.print((num1-i) +" = ");
+			}
+		}
+		System.out.print(total);
+
+		//Exercício 18 - Identificar se o número é primo ou não
+		System.out.println("Digite um número: ");
+		num1 = scan.nextInt();
+		int contador=0;
+		for(int i = 1; i <= num1; i++){
+			if(num1%i == 0 || num1%i == num1){
+				contador++;
+			}
+		}
+
+		if(contador == 2){
+			System.out.println("O número " + num1 + " é primo.");
+		}else{
+			System.out.println("O número " + num1 + " não é primo.");
+		}
+
+		//Exercício 19 - Calcular média aritmética de N notas
+		double nota = 0;
+		double soma = 0;
+		double media = 0;
+		for(int i = 1; i < 5; i++){
+			System.out.println("Digite a " + i + "ª nota: ");
+		nota = scan.nextInt();
+		soma += nota;
+		}
+		media = soma/4;
+		System.out.println("Média é " + media);
+
+		//Exercício 20 - Pedir N idades e verificar a média de idade da turma,
+		//0 a 25 Jovem, 26 a 60 adulta, 60 pra cima idosa
+		double idade = 0;
+		double soma = 0;
+		double media = 0;
+		int quantidade = 0;
+		String tipo;
+		System.out.println("Digite a quantidade de alunos: ");
+		quantidade = scan.nextInt();
+		for(int i = 1; i <= quantidade; i++){
+			System.out.println("Digite a " + i + "ª idade: ");
+					idade = scan.nextInt();
+					soma += idade;
+		}
+		media = soma/quantidade;
+		if(media < 26){
+			tipo = "Jovem";
+		}else if(media > 25 && media < 60){
+			tipo = "Adulta";
+		}else{
+			tipo = "Idosa";
+		}
+		System.out.println("Média é " + media + " e a turma é " + tipo);
+
+		//Exercício 21 - Média de alunos por turma
+		int alunos = 0;
+		int soma = 0;
+		int media = 0;
+		
+		System.out.println("Quantas turmas: ");
+		int turmas = scan.nextInt();
+		for(int i = 0; i < turmas; i++){
+			boolean turma = false;
+			while(turma==false){
+				System.out.println("Digite a quantidade de alunos da " + (i+1) + "ª turma até 40: ");
+				alunos = scan.nextInt();
+				if(alunos > 40){
+					turma = false;
+				}else{
+					soma +=alunos;
+					turma = true;
+				}
+			}
+		}
+		media = soma/turmas;
+		System.out.println("Média por turma é " + media);
+
+		//Exercício 23 - Listar itens da loja de 1,99
+		int itens = 50;
+		double artigo = 1.99;
+		double novoArtigo = 0; 
+		
+		System.out.println("Lojas Quase Dois - Tabela de Preços: ");
+		for(int i = 0; i < itens; i++){
+			novoArtigo = novoArtigo + artigo;
+			DecimalFormat df = new DecimalFormat("0.00"); 
+			String totalCasasDecimal = df.format(novoArtigo);
+			System.out.println((i+1) + " - " + totalCasasDecimal);
+		}
+
+		//Exercício 24 - Listar preço dos pães informados pelo usuário
+		int itens = 50;
+		double valores=0;
+		
+		System.out.println("Qual o preço do pão? ");
+		double artigo = scan.nextDouble();
+		double novoArtigo = 0; 
+		
+		
+		System.out.println("Panificadora - Tabela de Preços: ");
+		for(int i = 0; i < itens; i++){
+			novoArtigo = novoArtigo + artigo;
+			DecimalFormat df = new DecimalFormat("0.00"); 
+			String totalCasasDecimal = df.format(novoArtigo);
+			System.out.println((i+1) + " - " +  totalCasasDecimal);
+		}
+*/
+		//Exercício 25 - Conveniencia com caixa registradora rudimentar
+		System.out.println("Digite os valores dos produtos: ");
+		double total =0;
+		int produto=0;
+		do{
+			produto ++;
+		
+		System.out.println("Produto "+ produto + ":");
+		valores = scan.nextDouble();
+		total = total + valores;
+
+		}while(valores != 0);
+
+		DecimalFormat df = new DecimalFormat("0.00"); 
+		String totalCasasDecimal = df.format(total);
+		System.out.println("Total da compra: " + totalCasasDecimal);
+
+		System.out.println("Valor fornecido pelo cliente: ");
+		double pagamento = scan.nextDouble();
+
+		double troco = total - pagamento;
+		String trocoCasasDecimal = df.format(troco);
+		System.out.println("Troco: " + troco);
+
+	}
+}

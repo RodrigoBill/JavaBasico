@@ -1,0 +1,25 @@
+package ControlesDecisoesLoopsExercícios;
+
+import java.util.Scanner;
+
+public class ExreciciosWhileFor {
+
+	public static void main(String[] args) {
+
+
+		int num1 = 0;
+		int num2;
+		int num3;
+		Scanner scan = new Scanner(System.in);
+		
+		//Exrcício 1 - Pedir até que o valor numérico seja entre 0 e 10.
+		while (num1 < 0 || num1 > 10) {
+			System.out.print("Dê uma nota entre 0 e 10: ");
+			num1 = scan.nextInt();
+		}
+		
+		System.out.println("O número " + num1 + " é válido");
+
+	}
+
+}

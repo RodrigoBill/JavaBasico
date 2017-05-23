@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class ExerciciosAulaTreze {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+//		//Exercício 1 Olá mundo
+//		System.out.println("Olá");
+//		
+//		//Exercício 2 Inserir e mostrar numero
+//		System.out.println("Digite um número: " );
+//		int num1 = scan.nextInt();
+//		System.out.println("O número informado foi " + num1);
+//		
+//		//Exercício 3 somar dois numeros
+//		System.out.println("Digite dois números para somar: ");
+//		num1 = scan.nextInt();
+//		int num2 = scan.nextInt();
+//		System.out.println("Soma é = " + (num1 + num2));
+//		
+//		//Exercício 4 calcular a média
+//		System.out.println("Digite 4 notas para calcular a média: ");
+//		num1 = scan.nextInt();
+//		num2 = scan.nextInt();
+//		int num3 = scan.nextInt();
+//		int num4 = scan.nextInt();
+//		System.out.println("A média é = " + ((num1 + num2 + num3 + num4)/4));
+//		
+//		//Exercício 5 transformar metros em centimetros
+//		System.out.println("Digite a quantidade de metros: ");
+//		double metro = scan.nextDouble();
+//		System.out.println("Total de centímetros é " + (metro*100));
+		
+		//Exercício 6 calcular raio e area
+		System.out.println("Digite o diametro: ");
+		double pi = 3.14;
+		double diametro = scan.nextDouble();
+		double raio = diametro/2;
+		double area = pi * (raio*raio);
+		System.out.println("Raio = " + raio);
+		System.out.println("Área = " + area);
+		
+		//Exercício 7 calcular area de um quadrado e mostrar o dobro
+		System.out.println("Digite o diametro: ");
+		double lado = scan.nextDouble();
+		double areaQuadrado = lado*lado;
+		System.out.println("Área = " + area);
+		
+		
+		//Exercício 8
+		
+		//Exercício 9
+		
+		//Exercício 10
+		
+
+	}
+
+}

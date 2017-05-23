@@ -1,0 +1,538 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class ControlesDecisoesLoopsExerciciosIfSwitch {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int num1;
+		int num2;
+		int num3;
+		int num4;
+
+		double nota1;
+		double nota2;
+		double nota3;
+		double nota4;
+
+		String letra;
+
+		// //Exercício 1 Imprimir o maior
+		// System.out.println("Digite dois números: ");
+		// num1 = scan.nextInt();
+		// num2 = scan.nextInt();
+		//
+		// if(num1 > num2){
+		// System.out.println(num1 + " é maior.");
+		// }else if (num1 == num2){
+		// System.out.println(num1 + " é igual a " + num2);
+		// }else{
+		// System.out.println(num2 + " é maior.");
+		// }
+		//
+		// //Exercício 2 Mostrar se é positivo ou negativo
+		// System.out.println("Digite um número: ");
+		// num1 = scan.nextInt();
+		// if(num1 < 0){
+		// System.out.println(num1 + " é negativo.");
+		// }else{
+		// System.out.println(num1 + " é positivo.");
+		// }
+
+		// //Exercício 3 Saber se é masculino ou feminino
+		// System.out.println("Digite f para sexo feminino e m para masculino:
+		// ");
+		// String sexo = scan.next();
+		//
+		// if(sexo.equalsIgnoreCase("f")){
+		// System.out.println("Feminino");
+		// }else if(sexo.equalsIgnoreCase("m")){
+		// System.out.println("Masculino");
+		// }
+
+		// Exercício 4 Saber se é vogal ou consoante
+		// System.out.println("Digite uma letra: ");
+		// letra = scan.next();
+		//
+		// if (letra.length() > 1) {
+		// System.out.println("Não é uma letra válida");
+		// } else {
+		// switch (letra) {
+		// case "a":
+		// case "e":
+		// case "i":
+		// case "o":
+		// case "u":
+		// case "A":
+		// case "E":
+		// case "I":
+		// case "O":
+		// case "U":
+		// System.out.println("É vogal.");
+		// break;
+		// default:
+		// System.out.println("É consoante.");
+		// }
+		// }
+
+		// Exercício 5 Calcular duas notas / media /aprovação
+		// System.out.println("Digite a primeira nota: ");
+		// nota1 = scan.nextDouble();
+		// System.out.println("Digite a segunda nota: ");
+		// nota2 = scan.nextDouble();
+		//
+		// double media = (nota1+nota2)/2;
+		//
+		// if(media == 10){
+		// System.out.println("Sua média é " + media + ", você está foi aprovado
+		// com louvor!");
+		// }else if(media < 7){
+		// System.out.println("Sua média é " + media + ", você está
+		// reprovado!");
+		// }else if(media >= 7){
+		// System.out.println("Sua média é " + media + ", você está aprovado!");
+		// }
+
+		// Exercício 6 Mostrar maior de 3 números
+		// System.out.println("Digite 3 números: ");
+		// num1 = scan.nextInt();
+		// num2 = scan.nextInt();
+		// num3 = scan.nextInt();
+		//
+		// if(num1 >= num2 && num1 >= num3){
+		// System.out.println(num1 + " é maior.");
+		// }else if(num2 >= num1 && num2 >= num3){
+		// System.out.println(num2 + " é maior.");
+		// }else{
+		// System.out.println(num3 + " é maior.");
+		// }
+
+		// Exercício 7 Mostrar maior e menor de 3 números
+		// System.out.println("Digite 3 números: ");
+		// num1 = scan.nextInt();
+		// num2 = scan.nextInt();
+		// num3 = scan.nextInt();
+		//
+		// if(num1 >= num2 && num1 >= num3){
+		// System.out.println(num1 + " é maior.");
+		// }else if(num2 >= num1 && num2 >= num3){
+		// System.out.println(num2 + " é maior.");
+		// }else if(num3 >= num1 && num3 >= num2){
+		// System.out.println(num3 + " é maior.");
+		// }
+		//
+		// if(num1 <= num2 && num1 <= num3){
+		// System.out.println(num1 + " é menor.");
+		// }else if(num2 <= num1 && num2 <= num3){
+		// System.out.println(num2 + " é menor.");
+		// }else if(num3 <= num1 && num3 <= num2){
+		// System.out.println(num3 + " é menor.");
+		// }
+
+		// Exercício 8 Mostrar maior e menor de 3 preços
+		// System.out.println("Digite 3 preços de produto: ");
+		// nota1 = scan.nextDouble();
+		// nota2 = scan.nextDouble();
+		// nota3 = scan.nextDouble();
+		// if(nota1 <= nota2 && nota1 <= nota3){
+		// System.out.println(nota1 + " é menor.");
+		// }else if(nota2 <= nota1 && nota2 <= nota3){
+		// System.out.println(nota2 + " é menor.");
+		// }else if(nota3 <= nota1 && nota3 <= nota2){
+		// System.out.println(nota3 + " é menor.");
+		// }
+
+		// Exercício 9 3 numeros em ordem decrescente
+		// System.out.println("Digite 3 números: ");
+		// num1 = scan.nextInt();
+		// num2 = scan.nextInt();
+		// num3 = scan.nextInt();
+		//
+		// if(num1 <= num2 && num1 <= num3 && num2 <= num3){
+		// //num3 é maior
+		// //num1 é menor
+		// //num1 < num2 < num3
+		// System.out.println(num3 + " - " + num2 + " - " + num1);
+		// }else if(num1 <= num2 && num1 <= num3 && num3 <= num2){
+		// //num2 é maior
+		// //num1 é menor
+		// //num1 < num3 < num2
+		// System.out.println(num2 + " - " + num3 + " - " + num1);
+		// }else if(num2 <= num1 && num2 <= num3 && num1 <= num3){
+		// //num3 é maior
+		// //num2 é menor
+		// //num2 < num1 < num3
+		// System.out.println(num3 + " - " + num1 + " - " + num2);
+		// }else if(num2 <= num1 && num2 <= num3 && num3 <= num1){
+		// //num1 é maior
+		// //num2 é menor
+		// //num2 < num3 < num1
+		// System.out.println(num1 + " - " + num3 + " - " + num2);
+		// }else if(num3 <= num1 && num3 <= num2 && num1 <= num2){
+		// //num2 é maior
+		// //num3 é menor
+		// //num3 < num1 < num2
+		// System.out.println(num2 + " - " + num1 + " - " + num3);
+		// }else if(num3 <= num1 && num3 <= num2 && num2 <= num1){
+		// //num1 é maior
+		// //num3 é menor
+		// //num3 < num1 < num2
+		// System.out.println(num1 + " - " + num2 + " - " + num3);
+		// }
+
+		// Exercício 10 ler e imprimir de acordo com a letra
+		// System.out.println("Qual turno estuda (M)Matutino, (V)Vespertino ou
+		// (N)Noturno: ");
+		// letra = scan.next();
+		//
+		// if(letra.length() > 1){
+		// System.out.println("Digitou mais de uma letra.");
+		// }else{
+		// switch (letra) {
+		// case "m": System.out.println("Bom dia!");break;
+		// case "M": System.out.println("Bom dia!");break;
+		// case "v": System.out.println("Boa tarde!");break;
+		// case "V": System.out.println("Boa tarde!");break;
+		// case "n": System.out.println("Boa noite!");break;
+		// case "N": System.out.println("Boa noite!");break;
+		//
+		// default: System.out.println("Valor inválido!");
+		//
+		// }
+		// }
+
+		// Exercício 11 Calcular salario com reajuste percentual
+		/*
+		 * System.out.println("Digite o salário: "); double salario =
+		 * scan.nextDouble(); int percentual = 0; double aumento; double
+		 * novoSalario;
+		 * 
+		 * if (salario <= 280) { percentual = 20; } else if (salario >= 280 &&
+		 * salario <= 700) { percentual = 15; } else if (salario >= 700 &&
+		 * salario <= 1500) { percentual = 10; } else if (salario > 1500) {
+		 * percentual = 5; }
+		 * 
+		 * aumento = (salario/100) * percentual; novoSalario = salario +
+		 * aumento; System.out.println("Salário de " + salario);
+		 * System.out.println("Aumento de " + percentual + " %");
+		 * System.out.println("Ajuste de " + aumento); System.out.println(
+		 * "Novo salário é de " + novoSalario);
+		 */
+
+		// Exercício 12 Fazer folha de ponto com descontos no IR
+		/*
+		 * int IR = 3; int FGTS = 11; int INSS = 10; int percentual = 0; double
+		 * empresaGasta;
+		 * 
+		 * System.out.print("Digite o valor da sua hora: "); double valorHora =
+		 * scan.nextDouble(); System.out.print(
+		 * "Digite quantidade de horas trabalhadas: "); double horaTrabalhadaMes
+		 * = scan.nextDouble();
+		 * 
+		 * double salarioBruto = valorHora * horaTrabalhadaMes;
+		 * 
+		 * if (salarioBruto <= 900) { System.out.println("Insento");
+		 * System.out.println("Salário Bruto: " + valorHora + " x " +
+		 * horaTrabalhadaMes + " : R$ " + salarioBruto); } else { if
+		 * (salarioBruto > 900 && salarioBruto <= 1500) { percentual = 5; } else
+		 * if (salarioBruto > 1500 && salarioBruto <= 2500) { percentual = 10; }
+		 * else if (salarioBruto > 2500) { percentual = 20; }
+		 * 
+		 * double descontoIR = (salarioBruto / 100) * percentual; double
+		 * descontoINSS = (salarioBruto / 100) * INSS; double descontoFGTS =
+		 * (salarioBruto / 100) * FGTS;
+		 * 
+		 * System.out.println("Salário Bruto: " + valorHora + " x " +
+		 * horaTrabalhadaMes + " : R$ " + salarioBruto); System.out.println(
+		 * "(-) IR " + percentual + "% : R$ " + descontoIR); System.out.println(
+		 * "(-) INSS " + INSS + "% : R$ " + descontoINSS); System.out.println(
+		 * "FGTS " + FGTS + "% : R$ " + descontoFGTS);
+		 * 
+		 * double totalDeDescontos = descontoIR + descontoINSS; double
+		 * salarioLiquido = salarioBruto - totalDeDescontos;
+		 * 
+		 * System.out.println("Total de Descontos " + " : R$ " +
+		 * totalDeDescontos); System.out.println("Salário Líquido " + " : R$ " +
+		 * salarioLiquido); }
+		 */
+
+		// Exercício 13 dia da semana
+		/*
+		 * System.out.println(
+		 * "Digite o número correspondente ao dia da semana, sendo 1 domingo e 7 sábado."
+		 * ); int dia = scan.nextInt();
+		 * 
+		 * switch (dia) { case 1:System.out.println("Domingo");break; case
+		 * 2:System.out.println("Segunda");break; case
+		 * 3:System.out.println("Terça");break; case
+		 * 4:System.out.println("Quarta");break; case
+		 * 5:System.out.println("Quinta");break; case
+		 * 6:System.out.println("Sexta");break; case
+		 * 7:System.out.println("Sábado");break;
+		 * 
+		 * default:System.out.println("Número inválido!"); }
+		 */
+
+		// Exercício 14 Ler duas notas e tirar a média
+		/*
+		 * System.out.println("Digite a primeira nota: "); float nota01 =
+		 * scan.nextFloat(); System.out.println("Digite a segunda nota: ");
+		 * float nota02 = scan.nextFloat();
+		 * 
+		 * float media = (nota01 + nota02) / 2; String conceito = "i";
+		 * 
+		 * if(media >= 9){ conceito = "A"; }else if(media < 9 && media >= 7.5){
+		 * conceito = "B"; }else if(media >= 6 && media < 7.5){ conceito = "C";
+		 * }else if(media < 6 && media >= 4){ conceito = "D"; }else if(media <
+		 * 4){ conceito = "E"; }
+		 * 
+		 * System.out.print("Média " + media);
+		 * 
+		 * switch (conceito) { case "A": case "B": case "C":System.out.println(
+		 * " Aprovado!");break;
+		 * 
+		 * default:System.out.println(" Reprovado");break; }
+		 */
+
+		/*
+		 * //Exercício 15 Ler 3 lados e informar se o triangulo é equilátero,
+		 * isósceles ou escaleno System.out.println(
+		 * "Digite os três lados do triângulo:"); System.out.print("1º - ");
+		 * nota1 = scan.nextDouble(); System.out.print("2º - "); nota2 =
+		 * scan.nextDouble(); System.out.print("3º - "); nota3 =
+		 * scan.nextDouble();
+		 * 
+		 * String triangulo = "Não é um triângulo!";
+		 * 
+		 * if(nota1 + nota2 > nota3 || nota1 + nota3 > nota2 || nota2 + nota3 >
+		 * nota1){
+		 * 
+		 * if (nota1 == nota2 && nota1 == nota3) { triangulo = "Equilátero";
+		 * }else if (nota1 == nota2 && nota1!= nota3 || nota1 == nota3 && nota1
+		 * != nota2 || nota2 == nota3 && nota2 != nota1) { triangulo =
+		 * "Isósceles"; }else if (nota1 != nota2 && nota1 != nota2 && nota2 !=
+		 * nota3) { triangulo = "Escaleno"; }
+		 * 
+		 * System.out.println("O triângulo é " + triangulo);
+		 * 
+		 * }else { System.out.println(triangulo); }
+		 */
+
+		// Exrcício 16 Equação do 2º grau
+		/*
+		 * System.out.println("Digite os valores de a,b e c para a equação:");
+		 * System.out.print("a = "); double a = scan.nextDouble(); double b;
+		 * double c; double delta; double raiz1; double raiz2;
+		 * 
+		 * //Se a for diferente de zero continua if(a != 0){ System.out.print(
+		 * "b = "); b = scan.nextDouble(); System.out.print("c = "); c =
+		 * scan.nextDouble();
+		 * 
+		 * delta = Math.pow(b,2) - 4 * a * c; System.out.println(delta);
+		 * 
+		 * //Se DELTA for positivo continua if( delta >= 0){
+		 * 
+		 * //Se o DELTA positivo for diferente de ZERO continua if(delta != 0){
+		 * raiz1 = (- b + (Math.sqrt(delta)))/2*a; raiz2 = (- b -
+		 * (Math.sqrt(delta)))/2*a;
+		 * 
+		 * System.out.println("Raiz 1 = " + raiz1); System.out.println(
+		 * "Raiz 2 = " + raiz2);
+		 * 
+		 * }else if(delta != 0){ System.out.println("Raiz é " + delta); }
+		 * 
+		 * }else{ System.out.println(
+		 * "Equação não possuí raiz pois o Delta é negativo."); }
+		 * 
+		 * }else{ System.out.println("Não é uma equação do 2º Grau."); }
+		 */
+
+		// Exercício 17 Dizer se o ano é bissexto ou não
+		/*
+		 * System.out.println("Difite o ano: "); int ano = scan.nextInt();
+		 * 
+		 * if((ano % 4 == 0 && ano % 100 != 0 ) || ( ano % 400 == 0 )){
+		 * System.out.println(ano + " é bissesto."); }else{ System.out.println(
+		 * "Não é bissexto."); }
+		 */
+
+		// Exercício 18 Par ou impar
+		/*
+		 * System.out.print("Digite um número: "); num1 = scan.nextInt();
+		 * 
+		 * if (num1 % 2 == 0) { System.out.println("Par"); }else {
+		 * System.out.println("Impar"); }
+		 */
+
+		// Exercício 19 Calculadora, mostrar se é par ou impar, positivo e
+		// negativo
+		/*
+		 * System.out.print("Digite um número: "); num1 = scan.nextInt();
+		 * System.out.print("Digite outro número: "); num2 = scan.nextInt();
+		 * 
+		 * System.out.println("Qual operação deseja realizar: ");
+		 * System.out.println("Soma(+)"); System.out.println("Subtração(-)");
+		 * System.out.println("Divisão(/)");
+		 * System.out.println("Multiplicação(x)");
+		 * 
+		 * String operacao = scan.next(); int resultado = 0;
+		 * 
+		 * if (operacao.length() == 1) { switch (operacao) { case "+":resultado
+		 * = num1 + num2;break; case "-":resultado = num1 - num2;break; case
+		 * "/":resultado = num1 / num2;break; case "x":resultado = num1 *
+		 * num2;break;
+		 * 
+		 * default:System.out.println("Operação ilegal.");
+		 * 
+		 * } }else{ System.out.println("Operação ilegal."); }
+		 * System.out.print(resultado);
+		 * 
+		 * if (resultado % 2 == 0) { System.out.print(" Par"); } else {
+		 * System.out.print(" Impar"); } if(resultado > 0){ System.out.print(
+		 * " Positivo"); }else { System.out.print(" Negativo"); }
+		 */
+
+		// Exercício 20 - 5 perguntas e definir o grau de escala no crime
+		/*
+		 * int somaResposta = 0; boolean simNao;
+		 * 
+		 * System.out.println("1-Sim / 0-Não"); System.out.print(
+		 * "Telefonou para a vítima? "); simNao = scan.nextBoolean(); if (simNao
+		 * == true) { somaResposta++; } System.out.print(
+		 * "Esteve no local do crime? "); simNao = scan.nextBoolean(); if
+		 * (simNao == true) { somaResposta++; } System.out.print(
+		 * "Mora perto da vítima? "); simNao = scan.nextBoolean(); if (simNao ==
+		 * true) { somaResposta++; } System.out.print("Devia para a vítima? ");
+		 * simNao = scan.nextBoolean(); if (simNao == true) { somaResposta++; }
+		 * System.out.print("Já trabalhou coma vítima? "); simNao =
+		 * scan.nextBoolean(); if (simNao == true) { somaResposta++; }
+		 * 
+		 * switch (somaResposta) { case 0:System.out.println("Inocente!");break;
+		 * case 1:System.out.println("Inocente!");break; case
+		 * 2:System.out.println("Suspeito!");break; case 3: case
+		 * 4:System.out.println("Cúmplice!");break; case
+		 * 5:System.out.println("Culpado!");break;
+		 * 
+		 * default:System.out.println("Nada a declarar!"); break; }
+		 */
+
+		// Exercício 21 - Alcool 3% até 20 litros 5% acima, Gasolina 4% até 20
+		// litros 6% acima.
+		/*
+		 * System.out.println("Alcool-(A) ou Gasolina-(G): "); String
+		 * tipoCombustivel = scan.next();
+		 * 
+		 * double combustivel = 0;
+		 * 
+		 * double alcool = 1.90; double gasolina = 2.50;
+		 * 
+		 * double valorParcial = 0; double desconto = 0; double totalAPagar = 0;
+		 * 
+		 * double valorComb = 0;
+		 * 
+		 * int porcentagem = 0;
+		 * 
+		 * if(tipoCombustivel.length() > 1){ System.out.println(
+		 * "Combuntível inválido."); }else{ System.out.print(
+		 * "Quantidade de combustível: "); combustivel = scan.nextDouble();
+		 * 
+		 * switch (tipoCombustivel) { case "A": case "a": if (combustivel < 0) {
+		 * System.out.println("Valor inválido."); }else if(combustivel <= 20){
+		 * porcentagem = 3; valorParcial = combustivel * alcool; desconto =
+		 * (valorParcial / 100) * porcentagem; totalAPagar = valorParcial -
+		 * desconto; }else { porcentagem = 5; valorParcial = combustivel *
+		 * alcool; desconto = (valorParcial / 100) * porcentagem; totalAPagar =
+		 * valorParcial - desconto; } valorComb = alcool; tipoCombustivel =
+		 * "Alcool"; break; case "G": case "g": if (combustivel < 0) {
+		 * System.out.println("Valor inválido."); }else if(combustivel <= 20){
+		 * porcentagem = 4; valorParcial = combustivel * gasolina; desconto =
+		 * (valorParcial / 100) * porcentagem; totalAPagar = valorParcial -
+		 * desconto; }else { porcentagem = 6; valorParcial = combustivel *
+		 * alcool; desconto = (valorParcial / 100) * porcentagem; totalAPagar =
+		 * valorParcial - desconto; } valorComb = gasolina; tipoCombustivel =
+		 * "Gasolina"; break;
+		 * 
+		 * default:System.out.println("Tipo de combustível inválido.");break;
+		 * 
+		 * }
+		 * 
+		 * System.out.println("Tipo combustível: " + tipoCombustivel);
+		 * System.out.println("Valor do combustível por litro: " + valorComb);
+		 * System.out.println("Quantidade: " + combustivel); System.out.println(
+		 * "Desconto de " + porcentagem + "%: R$ " + desconto);
+		 * System.out.println("Total a ser pago: R$ " + totalAPagar); }
+		 */
+
+		// Exercício 22
+/*		System.out.println("1 - Morango / 2 - Maça");
+
+		String fruta;
+		double morango = 2.50;
+		double maca = 1.80;
+
+		double total = 0;
+		double porcentagem = 10;
+		double valorFruta = 0;
+		double desconto = 0;
+
+		System.out.print("Qual fruta: ");
+		fruta = scan.next();
+		System.out.print("Quantos Kg: ");
+		double qtdKg = scan.nextDouble();
+
+		if (qtdKg < 0) {
+			System.out.println("Quantidade inválida.");
+		} else {
+
+			switch (fruta) {
+			case "1":
+
+				total = qtdKg * morango;
+				fruta = "Morango";
+
+				if (qtdKg >= 5 && qtdKg <= 8) {
+					morango = 2.20;
+					total = qtdKg * morango;
+				}
+				valorFruta = morango;
+				porcentagem = 0;
+				break;
+
+			case "2":
+
+				total = qtdKg * maca;
+				fruta = "Maça";
+
+				if (qtdKg > 5 && qtdKg <= 8) {
+					maca = 2.20;
+					total = qtdKg * maca;
+				}
+				valorFruta = maca;
+				porcentagem = 0;
+				break;
+
+			default: System.out.println("Fruta inválida.");
+				break;
+			}
+			
+			if(qtdKg > 8 || total >= 25){
+				porcentagem = 10;
+				desconto = (total / 100) * porcentagem;
+				double parcial = total - desconto;
+				total = parcial;
+			}
+			DecimalFormat df = new DecimalFormat("0.00");
+			String totalCasasDecimal = df.format(total);
+			
+			System.out.println("Fruta: " + fruta);
+			System.out.println("Valor por Kilo: " + valorFruta);
+			System.out.println("Desconto de " + porcentagem + "% - R$ " + desconto);
+			System.out.println("Total à pagar: R$ " + totalCasasDecimal);
+
+		}
+*/
+		//Exercício 23 - 
+	}
+
+}

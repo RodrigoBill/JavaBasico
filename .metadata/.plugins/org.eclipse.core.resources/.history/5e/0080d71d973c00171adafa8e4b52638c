@@ -1,0 +1,589 @@
+package Arrays;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class ExerciciosArrays {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+/*
+		//Exercício 1 - Criar vetor A com 5 elementos inteiros. Criar vetor B com os mesmos elementos inteiros. 
+
+		int[] A = new int[5];
+		int[] B = new int[5];
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i];
+			System.out.println("A - " + A[i] + " B - " + B[i]);
+		}
+
+		//Exercício 2 - Criar vetor A com 8 elementos inteiros. Criar vetor B com os mesmos elementos inteiros multiplicados por 2. 
+
+		int[] A = new int[8];
+		int[] B = new int[8];
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i] * 2;
+			System.out.println("A - " + A[i] + " B - " + B[i]);
+		}
+
+		//Exercício 3 - Criar vetor A com 8 elementos inteiros. Criar vetor B com os mesmos elementos inteiros multiplicados por 2. 
+
+		int[] A = new int[8];
+		int[] B = new int[8];
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i] * A[i];
+			System.out.println("A - " + A[i] + " B - " + B[i]);
+		}
+
+		//Exercício 4 -  15 Elementos A, B vai ser a raiz quadrada de A
+
+		int[] A = new int[15];
+		double[] B = new double[A.length];
+
+		DecimalFormat df = new DecimalFormat("###,###.##");
+		
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = Math.sqrt(A[i]);
+			System.out.println("A - " + A[i] + " B - " + df.format(B[i]));
+		}
+		
+		//Exercício 5 - A e B com e 10 elementos sendo que B deve ser multiplicado pela posição
+
+		int[] A = new int[10];
+		int[] B = new int[A.length];
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i] * i;
+			System.out.println("A - " + A[i] + " B - " + B[i]);
+		}
+
+		//Exercício 6 - C vai ser a soma de A e B;
+
+		double[] A = new double[10];
+		double[] B = new double[A.length];
+		double[] C = new double[A.length];
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i];
+			C[i] = A[i] + B[i];
+			System.out.println(A[i] + " + " + B[i] + " = " + C[i]);
+		}
+
+		//Exercício 7 - C vai ser a subtração de A e B;
+
+		double[] A = new double[10];
+		double[] B = new double[A.length];
+		double[] C = new double[A.length];
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i];
+			C[i] = A[i] - B[i];
+			System.out.println(A[i] + " - " + B[i] + " = " + C[i]);
+		}
+		
+		//Exercício 8 - C vai ser a multiplicação de A e B;
+
+		double[] A = new double[10];
+		double[] B = new double[A.length];
+		double[] C = new double[A.length];
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i];
+			C[i] = A[i] * B[i];
+			System.out.println(A[i] + " x " + B[i] + " = " + C[i]);
+		}
+		
+		//Exercício 9 - C vai ser a dividido de A e B;
+
+		double[] A = new double[10];
+		double[] B = new double[A.length];
+		double[] C = new double[A.length];
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i];
+			C[i] = A[i] / B[i];
+			System.out.println(A[i] + " / " + B[i] + " = " + C[i]);
+		}
+		
+		//Exercício 10 - B é o resto de A;
+
+		double[] A = new double[10];
+		double[] B = new double[A.length];
+
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			B[i] = A[i]%2;
+			System.out.println("Resto " + B[i]);
+		}
+		
+		//Exercício 11 - Ler 10 elementos e imprimir a quantidade de pares;
+
+		double[] A = new double[10];
+		double[] B = new double[A.length];
+
+		int j = 0;
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			if(A[i]%2 == 0){
+				B[j] = A[i];
+				j++;
+			}
+		}
+		System.out.println("Quantidade de pares é " + j);
+		
+		//Exercício 12 - soma dos 10 elementos do vetor;
+
+		double[] A = new double[10];
+		double soma = 0;
+
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			soma += A[i];
+		}
+		System.out.println("A soma é " + soma);
+		
+		//Exercício 13 - soma dos 10 elementos do vetor que são múltiplos de 5;
+
+		double[] A = new double[10];
+		double soma = 0;
+
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+		if(A[i]%5 == 0){
+				soma += A[i];
+		}
+		}
+		System.out.println("A soma dos multiplos de 5 é " + soma);
+		
+		//Exercício 14 - Média dos 10 elementos do vetor que são ímpares;
+
+		int[] A = new int[10];
+		int soma = 0;
+		int j = 0;
+
+		for(int i = 0; i < A.length; i++){
+			A[i] = i + 1;
+		if(A[i]%2 != 0){
+				soma += A[i];
+		j++;
+		}
+		}
+		System.out.println("Soma " + soma);
+		System.out.println("Dividir por " + j);
+		int media = soma/j;
+		System.out.println("A média é " + media);
+		
+		//Exercício 15 - Percentual de pares e ímpares do vetor;
+
+		int[] A = new int[10];
+		int par = 0;
+		int impar = 0;
+		int porcentagemPar = 0;
+		int porcentagemImpar = 0;
+		int i = 0;
+
+		for(i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			
+			if(A[i]%2 == 0){
+				par++;
+			}else{
+				impar++;
+			}
+		}
+		
+		porcentagemPar = (100/(i))*par;
+		porcentagemImpar = (100/(i))*impar;
+		System.out.println("Quantidade par é " + par + ". É " + porcentagemPar + "% de " + i);
+		System.out.println("Quantidade impar é " + par + ". É " + porcentagemImpar + "% de " + i);
+		
+		//Exercício 16 - A) Somar e escrever vetores menores que 15;
+		//B) Imprimir a quantidade de elementos iguais a 15
+		//C) Média dos elementos superiores a 15
+
+		int[] A = new int[20];
+		int somaMenor = 0;
+		int somaMaior = 0;
+		int mediaMaior = 0;
+		int j = 0;
+		int n = 0;
+		int i ;
+
+		for(i = 0; i < A.length; i++){
+			A[i] = i + 1;
+			if(A[i] < 15){
+				somaMenor += A[i];
+				System.out.println("Menor que 15 => " + A[i]);
+			}else if(A[i] > 15){
+				somaMaior += A[i];
+				j++;
+			}else{
+				n++;
+			}
+		}
+		mediaMaior = somaMaior/j;
+		System.out.println("Soma menor que 15 = " + somaMenor);
+		System.out.println("Quantos iguais a 15 = " + n);
+		System.out.println("Média maior que 15 = " + mediaMaior);
+		
+		//Exercício 17 - Ler 10 elementos de IDADE e escrever quantos acima de 35;
+		int j = 0;
+		int[] idade = new int[10];
+
+		for(int i = 0;i < 10; i++){
+			System.out.println("Digite a " + (i+1) + "ª idade: ");
+			idade[i] = scan.nextInt();
+			
+		if(idade[i] > 35){
+			j++;
+		}	
+		}
+
+		System.out.println("Existe " + j + " pessoas acima de 35 anos.");
+		
+		//Exercício 18 - Ler 10 elementos de IDADE, escrever a maior e a menor assim como suas respectivas posições;
+		int j = 0;
+		int[] idade = new int[10];
+		int[] maior = new int[idade.length];
+		int[] menor = new int[idade.length];
+		int maiorPosicao = 0;
+		int menorPosicao = 0;
+		
+
+		for(int i = 0;i < idade.length; i++){
+			System.out.println("Digite a " + (i+1) + "ª idade: ");
+			idade[i] = scan.nextInt();
+			
+			if(i == 0){
+					maior[i] = idade[i];
+					menor[i] = idade[i];
+					maiorPosicao = i;
+					menorPosicao = i;
+			}else{
+				if(idade[i] > idade[i-1]){
+					maior[i] = idade[i];
+					maiorPosicao = i;
+				}else if(idade[i] < idade[i-1]){
+					menor[i] = idade[i];
+					menorPosicao = i;
+				}
+			}
+		}
+
+		System.out.println("Maior idade é " + maior[maiorPosicao] + " na posição " + maiorPosicao);
+		System.out.println("Menor idade é " + menor[menorPosicao] + " na posição " + menorPosicao);
+*/		
+		//Exercício 19 - Ler 2 notas bimestrais para um conjunto de 10 alunos.
+		//Mostrar as notas e médias referentes a cada aluno e se maior que 7 está aprovado.
+		String[] nome = new String[2];
+		double[] nota = new double[nome.length*2];
+		double[] media = new double[nome.length];
+		double soma = 0;
+		int k = 0;
+
+		for(int i = 0;i < nome.length; i++){
+			System.out.println("Digite o nome do " + (i+1) + "º aluno: ");
+			nome[i] = scan.next();
+			
+			for(int j = 0;j < 2; j++){
+				System.out.println("Digite a " + (j+1) + "ª nota do aluno: ");
+				nota[k] = scan.nextDouble();
+				k++;
+			}
+		}
+
+		k=0;
+		for(int i = 0;i < 10; i++){
+			System.out.print(nome[i]);
+
+			for(int j = 0;j < 2; j++){
+				System.out.print(" | " + nota[k]);
+				soma += nota[k];
+				k++;
+			}
+
+			media[i] = soma/2;
+			System.out.print(" | " + media[i]);
+			
+			if(media[i] >= 7 ){
+				System.out.print(" | " + "Aprovado!");
+			}else{
+				System.out.print(" | " + "Reprovado!");
+			}
+			
+			soma = 0;
+		}
+		
+		/*
+		//Exercício 20 - Cotação do dólar em relação ao real, vetor com 20 elementos.
+
+		double cotacao;
+		double[] vetorA = new double[20];
+
+		System.out.println("Qual a cotação do dólar? ");
+		cotacao = scan.nextDouble();
+
+		for(int i = 0; i < vetor.length; i++){
+			A[i] = cotacao * (i+1);
+			System.out.println(A[i]);
+		}
+
+		//Exercício 21 - não existe
+
+		//Exercício 22 - Gerar aleatóriamente um vetor com 10 elementos inteiros
+		//Iguais a 0 e 1 e informar o percentual da quantidade de cada número
+
+		int[] vetorA = new int[10];
+		int[] countA0 = 0;
+		int[] countA1 = 0;
+		int i ;
+
+
+		for(i = 0;i < vetorA.length; i++){
+			vetorA[i] = int(Math.round(Math.random)*1);
+
+			if(vetorA[i] == 0){
+			countA0++;
+		}else{
+				countA1++;
+		}
+		}
+
+
+		System.out.println("Percentual de 1 " + ((i/100)*countA1));
+		System.out.println("Percentual de 0 " + ((i/100)*countA0));
+
+		//Exercício 23 - Vetor 10 Elementos. Verificar se são pares.
+		//Se um elemento não for par o programa para. Utilizar variável do tipo FLAG
+
+		int[] vetorA = new int[10];
+
+		for(int i = 0;i < vetorA.length; i++){
+			
+			System.out.println("Digite um número: ");
+			vetorA[i] = scan.nextInt();
+			
+			if(vetorA[i] % 2 != 0){
+				break;
+		}
+		}
+
+		//Exercício 24 - Verificar em um vetor de 10 elementos se são Palíndromos 
+
+		int[] vetorA = new int[10];
+		System.out.println("Digite 10 números: ");
+
+		for(int i = 0 ;i < vetorA.length; i++){
+			vetorA[i] = scan.nextInt();
+		}
+
+		int j = 0;
+		for(int i =  vetorA.length;i > vetorA[j]; i--){
+			if(vetorA[j] != (vetorA.length - j)){
+				System.out.println("Não é um palíndromo.");
+				break;
+		}
+		}
+
+		//Exercício 25 - Vetores A e B, B recebe 1 quando A for par e 0 quando impar
+
+		int[] vetorA = new int[10];
+		int[] vetorB = new int[10];
+
+		System.out.println("Digite 10 números: ");
+		for(int i = 0 ;i < vetorA.length; i++){
+			vetorA[i] = scan.nextInt();
+
+		if(vetorA[i] % 2 == 0){
+				vetorB[i] = 1;
+			}else{
+			vetorB[i] = 0;
+		}
+			System.out.println("A["+i+"]"+" - B["+i+"]");
+		}
+
+
+		//Exercício 26 - Vetores A, B e c, C=1 quando A>B
+		//C=0 quando A=B
+		//C=-1 quando A<B.
+
+		double[] vetorA = new double[10];
+		double[] vetorB = new double[10];
+		double[] vetorC = new double[10];
+
+		System.out.println("Digite 10 números de A: ");
+		for(int i = 0 ;i < vetorA.length; i++){
+			vetorA[i] = scan.nextInt();
+		}
+
+		System.out.println("Digite 10 números de B: ");
+		for(int i = 0 ;i < vetorB.length; i++){
+			vetorB[i] = scan.nextInt();
+		}
+
+		for(int i = 0 ;i < vetorC.length; i++){
+
+		if(vetorA[i] > vetorB[i]){
+				vetorC[i] = 1;
+			}else if(vetorA[i] == vetorB[i]){
+			vetorC[i] = 0;
+		}else{
+				vetorC[i] = -1;
+			}
+			System.out.println(vetorA[i] + " - " + vetorB[i] + " = " vetorC[i]);
+		}
+
+		//27 - vetor A e B, B = A quando A < 7. 
+
+		double[] vetorA = new double[10];
+		char[] vetorB = new char[10];
+
+		for(int i = 0; i < 10; i++){
+			System.out.println("Digite o "+ (i+1) +"º de 10 números.");
+		vetorA = scan.next
+
+		if(vetorA[i] < 7){
+				vetorB[i] = "a";
+			}else if(vetorA[i] == 7){
+				vetorB[i] = "b";
+			}else if(vetorA[i] > 7 && vetorA[i] < 10){
+				vetorB[i] = "c";
+			}else if(vetorA[i] == 10){
+				vetorB[i] = "d";
+			}else if(A[i] > 10){
+				B[i] = "e";
+		}
+			System.out.println("A = "+vetorA[i]+" e B = "+vetorB[i]);
+		}
+
+		//28 - Vetor A e B de 10 posições sendo o primeiro de A o último de B e assim por diante.
+
+		double[] vetorA = new double[10];
+		double[] vetorB = new double[10];
+
+		for(int i = 0; i < 10; i++){
+			System.out.println("Digite o "+ (i+1) +"º de 10 números.");
+			vetorA[i] = scan.next;
+			int c = vetorA.length();
+			vetorB[c-i] = vetorA[i];
+		}
+		for(int i = 0; i < 10; i++){
+				System.out.println("A na posição "+ i + " = " + vetorA[i] + "e vetorB na posição " + i + " = " + vetorB[i]);
+		}
+
+		//29 - Vetor A e B 10 elementos cada. Vetor C deverá ter 20 elementos, os 10 primeiros de A e os 10 últimos de B.
+
+		double[] vetorA = new double[10];
+		double[] vetorB = new double[10];
+		double[] vetorC = new double[20];
+
+		for(int i = 0; i < 10; i++){
+			System.out.println("Digite o "+ (i+1) +"º de 10 números de A.");
+			vetorA[i] = scan.next;
+			System.out.println("Digite o "+ (i+1) +"º de 10 números de B.");
+			vetorB[i] = scan.next;
+		}
+		int j = 0; 
+		for(int i = 0; i < 20; i++){
+			if(i < 10){
+				vetorC[i] = vetorA[i];
+				System.out.println("A = " + vetorA[i] + " - " + "C = " + vetorC[i]);
+		}else{
+				vetorC[i] = vetorB[j];
+				System.out.println("B = " + vetorB[i] + " - " + "C = " + vetorC[i]);
+				j++;
+			}
+		}
+
+		//30 - Vetor A com 20 elementos. B com os pares e C com impares de A. 
+
+		double[] vetorA = new double[20];
+		double[] vetorB = new double[10];
+		double[] vetorC = new double[10];
+
+		int j = 0;
+		int n = 0;
+
+		for(int i = 0; i < 20; i++){
+			System.out.println("Digite o "+ (i+1) +"º de 20 números de A.");
+			vetorA[i] = scan.next;
+
+			if(vetorA[i] % 2 == 0){
+				vetorB[j] = vetorA[i];
+				j++;
+			}else{
+				vetorC[n] = vetorA[i];
+		n++;
+		}
+		}
+		for(int i = 0; i < 10; i++){
+			System.out.println("B = " + vetorB[i] + " e vetorC = "+ C[i]);
+		}
+
+
+		//31 - Vetor A com 20 elementos. Os primeiros de B com os pares e os últimos com impares de A. 
+		double[] vetorA = new double[20];
+		double[] vetorB = new double[20];
+		int n = vetorA.length();
+
+
+		for(int i = 0; i < 20; i++){
+			System.out.println("Digite o "+ (i+1) +"º de 20 números de A.");
+			vetorA[i] = scan.next;
+
+			if(vetorA[i] % 2 == 0){
+				vetorB[i] = vetorA[i];
+			}else{
+				vetorB[i - n] = vetorA[i];
+			}
+		}
+		for(int i = 0; i < 20; i++){
+			System.out.println("A = " + vetorA[i] + " e B = "+ vetorB[i]);
+		}
+
+		//32 - Vetor A com 5. Mostrar tabuada de cada número. 
+		int[] vetorA = new int[5];
+
+		for(int i = 0; i < 5; i++){
+		System.out.println("Digite o "+ (i+1) +"º de 5 números de A.");
+			vetorA[i] = scan.next;
+			
+			for(int j = 0; j <= 10 ; j++){
+				int total;
+			total = vetorA[i] * i;
+			System.out.println(i + " x " + vetorA[i] + " = " + total);
+		}	
+		}
+
+		//33 - Imprimir 10 elemento de um vetor A e dizer se é primo ou não. 
+		int[] vetorA = new int[10];
+
+
+		for(int i = 0; i < 10 ; i++){
+			vetorA[i] = i;	
+		}
+
+		for(int i = 0; i < 10 ; i++){
+			vetorA[i] = i;	
+		}
+
+*/
+	}
+
+}
